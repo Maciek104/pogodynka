@@ -70,6 +70,11 @@ class Measurement
         return $this->temperature;
     }
 
+    public function getCelsius(): ?int
+    {
+        return $this->temperature !== null ? (int)$this->temperature : null;
+    }
+
     public function setTemperature(string $temperature): static
     {
         $this->temperature = $temperature;
